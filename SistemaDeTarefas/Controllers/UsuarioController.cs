@@ -50,8 +50,7 @@ namespace UsuariosTarefasDAL.Controllers
         [HttpPut]
         public async Task<ActionResult<UsuarioModel>> Atualizar([FromBody] UsuarioModel usuarioModel, int id)
         {
-            usuarioModel.Id = id;
-            UsuarioModel usuario = await _usuarioRepositorio.Atualizar(usuarioModel, id);
+            UsuarioModel usuario = await _usuarioRepositorio.Atualizar(usuarioModel);
             return Ok(usuario);
         }
 

@@ -16,7 +16,7 @@ namespace UsuariosTarefasDAL.Repositorios.Interfaces
 
         Task<UsuarioModel> Adicionar(UsuarioModel usuario);
 
-        Task<UsuarioModel> Atualizar(UsuarioModel usuario, int id);
+        Task<UsuarioModel> Atualizar(UsuarioModel usuario);
 
         Task<bool> Apagar(int id);
 

@@ -40,13 +40,13 @@ namespace UsuariosTarefasDAL.Repositorios
         }
 
 
-        public async Task<UsuarioModel> Atualizar(UsuarioModel usuario, int id)
+        public async Task<UsuarioModel> Atualizar(UsuarioModel usuario)
         {
-            UsuarioModel usuarioPorId = await BuscarPorId(id);
+            UsuarioModel usuarioPorId = await BuscarPorId(usuario.Id);
 
             if (usuarioPorId == null)
             {
-                throw new Exception($"Usuário para o ID: {id} não foi encontrado no banco de dados.");
+                throw new Exception($"Usuário para o ID: {usuario.Id} não foi encontrado no banco de dados.");
             }
 
             usuarioPorId.Nome = usuario.Nome;
